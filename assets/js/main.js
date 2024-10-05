@@ -71,49 +71,57 @@
   /**
    * Scroll top button
    */
-  let scrollTop = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
-  }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
 
   //Video
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var swiper = new Swiper('.swiper-container', {
-      loop: false,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      on: {
-        slideChange: function () {
-          var activeSlide = this.slides[this.activeIndex];
-          if (activeSlide.classList.contains('video-slide')) {
-            this.autoplay.stop();
-          } else {
-            this.autoplay.start();
-          }
+  let scrollTop = document.querySelector('.scroll-top');
+
+function toggleScrollTop() {
+  if (scrollTop) {
+    window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+  }
+}
+scrollTop.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+window.addEventListener('load', toggleScrollTop);
+document.addEventListener('scroll', toggleScrollTop);
+
+// Video
+
+document.addEventListener('DOMContentLoaded', function () {
+  var swiper = new Swiper('.swiper-container', {
+    loop: false,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    on: {
+      slideChange: function () {
+        var activeSlide = this.slides[this.activeIndex];
+        if (activeSlide.classList.contains('video-slide')) {
+          this.autoplay.stop();
+          console.log('Autoplay stopped on video slide');
+        } else {
+          this.autoplay.start();
+          console.log('Autoplay started');
         }
       }
-    });
+    }
   });
+
+  // Exemplo de uso da variável swiper
+  console.log(swiper);
+});
 
   /**
    * Animation on scroll function and init

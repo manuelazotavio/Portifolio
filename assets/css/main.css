@@ -986,6 +986,10 @@ section,
   padding: 0;
 }
 
+@media (max-width: 1199px) {
+  
+  }
+
 .about ul li {
   padding-bottom: 5px;
   display: flex;
@@ -2070,3 +2074,13 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
+/* Adiciona espaço entre <strong> e <span> */
+ul li strong {
+  margin-right: 5px; /* Ajuste o valor conforme necessário */
+}
+
+/* Remove as bolinhas da lista */
+.list-unstyled {
+  list-style-type: none;
+  padding: 0;
+}
