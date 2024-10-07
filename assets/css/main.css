@@ -30,7 +30,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #0f0f0f;  /* The default color of the main navmenu links */
-  --nav-hover-color: #9950c4; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #803fa7; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -180,6 +180,10 @@ h6 {
   margin: 0 0 0 30px;
   border-radius: 50px;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .header .btn-getstarted:hover,
@@ -215,7 +219,7 @@ h6 {
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: rgba(63, 40, 90, 0.9);
+  --background-color: rgba(139, 121, 160, 0.9);
 }
 
 /*--------------------------------------------------------------
@@ -613,6 +617,8 @@ h6 {
   line-height: 0;
   color: var(--accent-color);
 }
+
+
 
 .footer .footer-links ul li {
   padding: 10px 0;
@@ -1212,6 +1218,20 @@ section,
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;
   height: 100%;
+}
+
+.open-certificate {
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+}
+
+
+.open-certificate .icon {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
 }
 
 .services .service-item .icon {
