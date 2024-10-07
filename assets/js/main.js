@@ -146,21 +146,42 @@ document.addEventListener('DOMContentLoaded', function () {
   /**
    * Init swiper sliders
    */
+  
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
-
+  
+      // Função para pausar o autoplay se o slide tiver um vídeo
+      function handleSlideChange(swiperInstance) {
+        const currentSlide = swiperInstance.slides[swiperInstance.activeIndex];
+        if (currentSlide.querySelector('video')) {
+          swiperInstance.autoplay.stop(); // Para o autoplay se tiver vídeo
+        } else {
+          swiperInstance.autoplay.start(); // Retoma o autoplay se não tiver vídeo
+        }
+      }
+  
       if (swiperElement.classList.contains("swiper-tab")) {
         initSwiperWithCustomPagination(swiperElement, config);
       } else {
-        new Swiper(swiperElement, config);
+        // Inicialize o Swiper
+        const swiperInstance = new Swiper(swiperElement, config);
+        
+        // Adiciona o evento slideChange para pausar/retomar o autoplay
+        swiperInstance.on('slideChange', function () {
+          handleSlideChange(swiperInstance);
+        });
+  
+        // Chama a função ao inicializar para garantir que o autoplay seja verificado já no início
+        handleSlideChange(swiperInstance);
       }
     });
   }
-
+  
   window.addEventListener("load", initSwiper);
+  
 
   /**
    * Frequently Asked Questions Toggle
