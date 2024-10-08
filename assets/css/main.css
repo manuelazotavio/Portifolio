@@ -988,6 +988,16 @@ section,
   padding: 0 10px;
 }
 
+@media (max-width: 565px) {
+  .clients .swiper-slide img {
+    transition: 0.3s;
+    padding: 0 10px;
+    width: 60%;
+  }
+}
+  
+
+
 .react-slide {
   width: 600px;
 }
