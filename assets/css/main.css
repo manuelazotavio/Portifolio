@@ -17,6 +17,17 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
+.sitename{
+  font-family: var(--default-font);
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 25px;
+  margin-bottom: 0px;
+  margin-right: 20px;
+  margin-left: 10px;
+  
+}
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #fcfcfc; /* Background color for the entire website, including individual sections */
