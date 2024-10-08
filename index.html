@@ -7,12 +7,9 @@
   <title>Portifólio</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-  <script>
-      (function(){
-          emailjs.init("vkVPvdnj9gg8jmDkc"); // Substitua pelo seu User ID do EmailJS
-      })();
-  </script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -225,20 +222,21 @@
       
       <div class="container">
         <div class="row gy-6">
-          <div class="col-lg-15 content" data-aos="fade-up" data-aos-delay="100">
-            <ul>
-              <li><i class="bi bi-check2-circle"></i><strong class="strong">Formação:</strong> <span>Técnico em Informática para Internet pelo IFSP.</span></li>
-
-              <li><i class="bi bi-check2-circle"></i><strong class="strong">Educação Atual:</strong> <span>Cursando o terceiro ano do ensino médio.</span></li>
-
-              <li><i class="bi bi-check2-circle"></i><strong class="strong">Objetivo Profissional:</strong> <span>Buscar oportunidades de estágio e vagas júnior, especialmente na área de Análise e Desenvolvimento de Sistemas.</span></li>
-
-              <li><i class="bi bi-check2-circle"></i><strong class="strong">Qualidades:</strong> <span>Dedicada, proativa e sempre em busca de aprendizado e crescimento na área tecnológica.</span></li>
-            </ul>
-          </div>
+            <div class="col-lg-15 content" data-aos="fade-up" data-aos-delay="100">
+                <ul>
+                    <li><i class="bi bi-check2-circle"></i><strong class="strong">Formação:</strong> <span>Técnico em Informática para Internet pelo IFSP.</span></li>
+    
+                    <li><i class="bi bi-check2-circle"></i><strong class="strong">Educação Atual:</strong> <span>Cursando o terceiro ano do ensino médio.</span></li>
+    
+                    
+                    <li><i class="bi bi-check2-circle"></i><strong class="strong">Objetivo:</strong> <span style="white-space: nowrap;">Buscar oportunidades de estágio e vagas júnior, especialmente na área de Análise e Desenvolvimento de Sistemas.</span></li>
+    
+                    <li><i class="bi bi-check2-circle"></i><strong class="strong">Qualidades:</strong> <span>Dedicada, proativa e sempre em busca de aprendizado e crescimento na área tecnológica.</span></li>
+                </ul>
+            </div>
         </div>
-      </div>
-
+    </div>
+    
     </section><!-- /About Section -->
 
 
@@ -427,7 +425,7 @@
           </div>
 
           <div class="col-lg-7">
-            <form class="php-email-form" method="post" id="contact-form" data-aos="fade-up" data-aos-delay="200">
+            <form class="php-email-form" id="contact-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -442,7 +440,7 @@
 
                 <div class="col-md-6">
                   <label for="celular-field" class="pb-2">Seu Telefone</label>
-                  <input type="celular" class="form-control" name="celular" id="celular-field" required="">
+                  <input type="text" class="form-control" name="celular" id="celular-field" required="">
                 </div>
 
 
@@ -514,6 +512,8 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+
+  <script src="./forms/contato.js"></script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
