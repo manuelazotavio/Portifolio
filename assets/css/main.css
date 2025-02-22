@@ -1031,8 +1031,13 @@ section,
   padding: 0;
 }
 
-@media (max-width: 1199px) {
-  
+@media (max-width: 992px) {
+  .about ul li {
+  margin: 10px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
   }
 
 .about ul li {
