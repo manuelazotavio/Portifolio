@@ -1992,20 +1992,60 @@ section,
   width: 100%;
 }
 
-.portfolio-details .portfolio-details-slider video {
+.portfolio-details .portfolio-details-slider .video-mobile {
   width: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-details .portfolio-details-slider .gr-video {
+  width: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+.gr-video{
+  width: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-details-slider{
+  width: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  display: flex;
+  justify-content: center;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  opacity: 1;
+.gr-mobile{
+  width: 40%;
+}
+
+.gr-div{
+  width: 50px;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
