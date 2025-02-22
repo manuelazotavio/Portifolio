@@ -930,6 +930,9 @@ section,
   background: var(--accent-color);
   font-family: var(--heading-font);
   font-weight: 500;
+          width: 50%;
+        align-self: center;
+        text-align: center;
   font-size: 15px;
   letter-spacing: 1px;
   display: inline-block;
