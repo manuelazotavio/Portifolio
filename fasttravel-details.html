@@ -200,6 +200,26 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+  <script>
+    function moveButtons() {
+      const btnConversar = document.getElementById('botao-whatsapp');
+      const btnCV = document.getElementById('botao-cv');
+      const mobileButtons = document.getElementById('mobile-buttons');
+  
+      if (window.innerWidth < 565) {
+        mobileButtons.appendChild(btnConversar);
+        mobileButtons.appendChild(btnCV);
+        mobileButtons.classList.remove('d-none');
+      } else {
+        document.querySelector('.container-fluid').appendChild(btnConversar);
+        document.querySelector('.container-fluid').appendChild(btnCV);
+        mobileButtons.classList.add('d-none');
+      }
+    }
+  
+    window.addEventListener('resize', moveButtons);
+    window.addEventListener('load', moveButtons);
+  </script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
