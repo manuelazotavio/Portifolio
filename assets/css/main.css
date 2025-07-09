@@ -906,6 +906,21 @@ section,
   align-items: center;
   justify-content: center;
 }
+#hero.hackathon-bg {
+  background: url("../img/caraguatatour.jpg") center/cover no-repeat;
+  position: relative;
+  padding: 120px 0;          /* mantém respiro no topo/rodapé */
+  isolation: isolate;        /* garante z-index da pseudo-camada */
+}
+
+/* peliculazinha escura pra texto ficar legível */
+#hero.hackathon-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* mexe na opacidade se quiser +/- escuro */
+  z-index: -1;
+}
 
 .hero .hero-img{
   justify-content: center;
