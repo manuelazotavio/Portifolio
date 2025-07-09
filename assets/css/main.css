@@ -31,6 +31,7 @@
 .sitename{
   font-family: var(--default-font);
   font-weight: 600;
+  color: #fff;
   text-align: center;
   white-space: nowrap;
   font-size: 25px;
@@ -52,7 +53,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #0f0f0f;  /* The default color of the main navmenu links */
-  --nav-hover-color: #803fa7; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #ddbaf1; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -167,7 +168,7 @@ h6 {
 .header {
   --background-color: #ffffff;
   --heading-color: #ffffff;
-  color: var(--default-color);
+  color: #fff;
   background-color: var(--background-color);
   padding: 15px 0;
   transition: all 0.5s;
@@ -267,7 +268,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: #000000;
+    color: #fff;
     padding: 18px 15px;
     font-size: 18px;
     font-family: var(--nav-font);
@@ -909,11 +910,10 @@ section,
 #hero.hackathon-bg {
   background: url("../img/caraguatatour.jpg") center/cover no-repeat;
   position: relative;
-  padding: 120px 0;          /* mantém respiro no topo/rodapé */
-  isolation: isolate;        /* garante z-index da pseudo-camada */
+  padding: 120px 0;          
+  isolation: isolate;        
 }
 
-/* peliculazinha escura pra texto ficar legível */
 #hero.hackathon-bg::before {
   content: "";
   position: absolute;
@@ -929,6 +929,7 @@ section,
 .hero h1 {
   margin: 0;
   font-size: 48px;
+  color: #fff;
   font-weight: 700;
   line-height: 56px;
 }
